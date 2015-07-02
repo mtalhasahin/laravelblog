@@ -11,7 +11,24 @@
 |
 */
 
+
+
+
+/*Ön Kısım Rotasyonları*/
 Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('admin','Backend_LoginController@login');
+Route::post('adminpost','Backend_LoginController@loginpost');
+Route::get('logout','Backend_LoginController@logout');
+
+
+
+
+
+/*Admin Kısmı Rotasyonları*/
+Route::controller('panel','Backend_PanelController');
+
+
